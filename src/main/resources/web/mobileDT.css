@@ -1,0 +1,72 @@
+    DIV.formsTabBar {
+        display:none !important;
+    }
+
+    [customType=inputBarcode] > div:first-child {
+        width: 100%;
+    }
+    [inputmode=none] ~ .iconKeyboard::after {
+        content: '⌨';
+        padding: 4px;
+        font-size: larger;
+    }
+    [inputmode=text] ~ .iconKeyboard::after {
+        content: '✘';
+        color: red;
+        padding: 4px;
+        font-size: larger;
+    }
+    .iconCamera::after {
+        content: '📷';
+        padding: 4px;
+        font-size: larger;
+    }
+
+    div[customType=streamBox] {
+        position: sticky;
+        border-style: groove;
+        width: 80vw;
+        height: 60vw;
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+        margin-top: auto;
+    }
+    div[customType=streamBox][hidden] {
+        display:none;
+    }
+
+    div[customType=streamBox] > div {
+        position:fixed;
+    }
+
+    div[customType=streamBox] > canvas, video {
+        position:fixed;
+        object-fit: cover;
+        display:block;
+        width: 80vw;
+        height: 60vw;
+    }
+
+    div[customType=streamBox] > div > button::before {
+        content: '📷';
+    }
+
+    [customType=htmlText] {
+        width: 100%;
+        height: 100%;
+        display:block !important;
+
+    }
+    [customType=htmlText] h5 {
+        font-size: larger;
+        color: green;
+        margin: 0;
+        text-align: center;
+    }
+    [customType=htmlText] h6 {
+        display: block;
+        font-size: unset;
+        margin: 0;
+        text-align: center;
+    }

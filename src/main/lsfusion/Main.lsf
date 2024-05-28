@@ -1,0 +1,16 @@
+MODULE Main;
+
+REQUIRE SystemEvents;
+
+readedBarcode 'ШК' = DATA LOCAL STRING ();
+
+FORM demo 'Демо'
+    PROPERTIES () PANEL readedBarcode CUSTOM 'inputBarcode' ON CHANGE {
+        INPUT b = STRING DO readedBarcode() <- b;
+    }
+;
+onWebClientStarted() + {
+    INTERNAL CLIENT WAIT 'mobileDT.css';
+    INTERNAL CLIENT WAIT 'inputBarcode.js';
+    SHOW demo;
+}
